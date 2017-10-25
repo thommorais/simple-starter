@@ -1,0 +1,49 @@
+.steps{
+    padding-top: 50px;
+
+    ul{
+        margin: 0 auto;
+        max-width: 880px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        width: 25%;
+        margin: 0 1px;
+        font-size: em(18px);
+        font-weight: 700;
+        text-align: center;
+
+        .title{
+            margin: 10px 0 0;
+            color: $cWhite;
+        }
+
+        .step{
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+            padding: 6px;
+            border: 2px solid $cWhite;
+            border-radius: 30px;
+            color: $cWhite;
+        }
+
+        &.active{
+            .step{
+                background: $c1;
+                border-color: $c1;
+            }
+
+            .title{
+                color: $c1;
+            }
+        }
+
+
+    }
+
+
+}

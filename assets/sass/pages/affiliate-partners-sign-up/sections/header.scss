@@ -1,0 +1,13 @@
+header{
+    padding: 20px 0;
+    border-top: 1px solid $c5;
+    background: $c5;
+    align-items: center;
+    min-width: 720px;
+
+    .wrp{
+        display: flex;
+        justify-content: space-between;
+
+    }
+}

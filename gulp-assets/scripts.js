@@ -4,10 +4,11 @@ import babel from 'gulp-babel'
 import uglify from 'gulp-uglify'
 import merge from 'merge-stream'
 import babili from 'gulp-babili'
-import browserify from 'gulp-browserify'
+// import browserify from 'gulp-browserify'
+import gutil from 'gulp-util'
+
 // utils
 const $ = require('gulp-load-plugins')()
-
 import concat from 'gulp-concat'
 import plumber from 'gulp-plumber'
 
@@ -21,14 +22,16 @@ export default function(){
   }
 
   const jsPaths = {
-    src: `${dirs.src}/**/*.js`,
+    //src: `${dirs.src}/**/*.js`,
+    src: `${dirs.src}/js/affiliate-partners-sign-up/**/*.js`,
+
   }
 
   gulp.task('scripts', () => {
 
     return gulp.src(jsPaths.src)
       .pipe(concat('main.js'))
-      .pipe(browserify())
+      //.pipe(browserify())
       .pipe(babel({presets: ['es2015']}))
       .pipe($.uglify())
       .pipe(babili({

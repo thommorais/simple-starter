@@ -1,0 +1,13 @@
+.sign-up{
+    @extend %boxes;
+    display: block;
+    height: 305px;
+    max-width: 505px;
+
+    h1{
+        color: $c8;
+        font-size: em(30px);
+        font-weight: 900;
+        text-align: center;
+    }
+}

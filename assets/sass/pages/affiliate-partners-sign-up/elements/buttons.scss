@@ -1,0 +1,43 @@
+.signin-link{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: $c6;
+    color: $cWhite;
+
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+}
+
+.ghost-button{
+    align-self: flex-end;
+    border: 2px solid $c1;
+    color: $c1;
+    padding: 10px 50px;
+    font-size: em(18px);
+    font-weight: 900;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover{
+        background: $c1;
+        color: $cWhite;
+    }
+
+    &:active{
+        transform: translate3d(0, 1px, 0);
+    }
+
+}
+
+
+.no-style{
+    border: none;
+    background: none;
+    font-size: em(18px);
+    font-weight: 900;
+    color: $c1;
+}

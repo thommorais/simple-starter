@@ -3,6 +3,8 @@ import gulp from 'gulp'
 import sourcemaps from 'gulp-sourcemaps'
 import plumber from 'gulp-plumber'
 
+import gutil from 'gulp-util'
+
 
 import sass from 'gulp-sass'
 import sassGlob from 'gulp-sass-glob'
@@ -17,7 +19,7 @@ const dirs = {
 }
 
 const sassPaths = {
-  src: `${dirs.src}/sass/style.scss`,
+  src: `${dirs.src}/sass/*.scss`,
   dest: `${dirs.dest}`
 }
 
@@ -35,7 +37,7 @@ export default function(){
       .pipe(plumber(error => gutil.log(error.message)))
       .pipe(sass.sync())
       .pipe(autoprefixer())
-      .pipe(cleanCSS({compatibility: 'ie8'}))
+      //.pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(sassPaths.dest))
 

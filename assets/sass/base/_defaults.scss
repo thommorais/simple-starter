@@ -11,6 +11,7 @@ html, body{
 
 *{
   box-sizing: border-box;
+  outline-width: thin;
 }
 
 @mixin clearfix {

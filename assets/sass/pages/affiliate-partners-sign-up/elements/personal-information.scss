@@ -1,0 +1,58 @@
+%personal-information{
+    @extend %boxes;
+    max-width: 880px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    h1{
+        margin: 10px 0 15px;
+        color: $c8;
+        font-size: em(30px);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    h3{
+        margin: 0 auto;
+        text-align: center;
+        font-size: em(18px);
+        max-width: 610px;
+    }
+
+    form{
+        margin: 30px auto;
+        padding: 0 30px;
+    }
+
+    .space-around{
+        margin-top: 10px;
+    }
+    
+}
+.personal-information{
+    @extend %personal-information;
+
+    h1{
+        margin: 10px 0 15px;
+        color: $c8;
+        font-size: em(30px);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    h3{
+        margin: 0 auto;
+        text-align: center;
+        font-size: em(18px);
+        max-width: 610px;
+    }
+
+    form{
+        margin: 30px auto;
+        padding: 0 30px;
+    }
+
+    .space-around{
+        margin-top: 10px;
+    }
+}

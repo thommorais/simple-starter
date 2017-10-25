@@ -1,0 +1,40 @@
+.fake-checkbox{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border: 1px solid $c9;
+    background: $cWhite;
+
+    &:after,
+    &:before{
+        position: absolute;
+        width: 2px;
+        content: '';
+        background: $c6;
+        border-radius: 2px;
+        opacity: 0
+    }
+
+    &:after{
+        top: 6px;
+        left: 5px;
+        height: 8px;
+        transform: rotate(-42deg);
+    }
+
+    &:before{
+        top: 3px;
+        left: 11px;
+        height: 11px;
+        transform: rotate(42deg);
+    }
+
+}
+
+input:checked + label .fake-checkbox{
+    &:after,
+    &:before{
+        opacity: 1
+    }
+}

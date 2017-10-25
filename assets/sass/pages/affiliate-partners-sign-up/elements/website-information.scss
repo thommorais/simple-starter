@@ -1,0 +1,8 @@
+.website-information{
+    @extend %personal-information;
+
+    label{
+        width: 215px;
+    }
+
+}

@@ -1,0 +1,14 @@
+#svgs{
+    position: relative;
+    transform: translateY(-95%);
+
+    &:before{
+        position: absolute;
+        bottom: -4px;
+        content: '';
+        height: 10px;
+        width: 100%;
+        background: $c6;
+    }
+
+}

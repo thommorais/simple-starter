@@ -1,0 +1,58 @@
+.fields{
+    display: flex;
+
+    .field{
+        width: 50%;
+    }
+
+}
+
+.field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &.end{
+        justify-content: flex-end;
+    }
+
+    &.space-around{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    label{
+        display: block;
+        width: 120px;
+        color: #808080;
+        font-size: em(18px);
+        text-align: right;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea{
+        display: block;
+        width: calc(100% - 125px);
+        margin-left: 5px;
+        padding: 8px;
+        border: 0;
+        outline-width: thin;
+        outline-color: darken($c1, 10);
+        transition: outline-width 0.2s linear;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        color: $c5;
+        font-weight: 700;
+        font-size: em(16px);
+        baseline: middle;
+    }
+
+    textarea{
+        resize: none;
+        min-height: 170px;
+    }
+
+}

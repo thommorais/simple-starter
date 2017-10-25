@@ -1,0 +1,30 @@
+.main-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-links{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+
+    li{
+        margin: 0 10px;
+
+        a{
+            &:hover{
+                color: $c6;
+            }
+        }
+    }
+
+    a{
+        display: block;
+        padding: 10px;
+        font-size: em(14px);
+        color: $cWhite;
+
+
+    }
+}
