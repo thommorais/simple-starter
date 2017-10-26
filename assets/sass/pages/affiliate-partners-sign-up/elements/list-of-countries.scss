@@ -3,7 +3,6 @@
     flex-wrap: wrap;
 
     > div{
-        margin-bottom: 20px;
         width: 20%;
         align-items: center;
     }
@@ -22,14 +21,21 @@
         width: auto;
         padding: 20px;
         font-size: em(14px);
-        text-align: left;
+        text-align: center;
         cursor: pointer;
 
-        > div{
+        .label-wrp{
             position: relative;
+            margin: 0 auto;
+            min-width: 80px;
             font-size: em(18px);
-        }
 
+            .flex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
 
     }
 

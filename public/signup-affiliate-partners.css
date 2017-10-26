@@ -113,8 +113,12 @@ svg:not(.no-touch) polyline {
 
 body, html {
   font-family: 'Lato', sans-serif;
-  background: #51d1c2;
+  background: #2b3151;
   min-width: 720px; }
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2B3151), color-stop(55%, #2B3151), color-stop(55%, #51D1C2), to(#51D1C2));
+  background-image: linear-gradient(-180deg, #2B3151 0%, #2B3151 55%, #51D1C2 55%, #51D1C2 100%); }
 
 .personal-information, .tag-geos, .website-information, .sign-up {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
@@ -258,6 +262,112 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
     resize: none;
     min-height: 170px; }
 
+.geo .flag {
+  display: block;
+  margin: 0 auto 10px;
+  width: 66px;
+  height: 43px;
+  background-image: url(../assets/img/flags.png);
+  background-size: 66px auto;
+  background-repeat: no-repeat; }
+
+.lang-ar .flag {
+  background-position: 0 1px; }
+
+.lang-au .flag {
+  background-position: 0 -252px; }
+
+.lang-be .flag {
+  background-position: 0 -464px; }
+
+.lang-br .flag {
+  background-position: 0 -1184px; }
+
+.lang-ca .flag {
+  background-position: 0 -1142px; }
+
+.lang-de .flag {
+  background-position: 0 -42px; }
+
+.lang-es .flag {
+  background-position: 0 -295px; }
+
+.lang-fr .flag {
+  background-position: 0 -507px; }
+
+.lang-ge .flag {
+  height: 42px;
+  background-position: 0 -1100px; }
+
+.lang-hk .flag {
+  background-position: 0 -1057px; }
+
+.lang-id .flag {
+  height: 42px;
+  background-position: 0 -84px; }
+
+.lang-in .flag {
+  background-position: 0 -337px; }
+
+.lang-it .flag {
+  background-position: 0 -549px; }
+
+.lang-jp .flag {
+  height: 42px;
+  background-position: 0 -1016px; }
+
+.lang-kr .flag {
+  background-position: 0 -973px; }
+
+.lang-mx .flag {
+  background-position: 0 -549px; }
+
+.lang-my .flag {
+  background-position: 0 -379px; }
+
+.lang-nl .flag {
+  background-position: 0 -676px; }
+
+.lang-ph .flag {
+  background-position: 0 -888px; }
+
+.lang-pl .flag {
+  background-position: 0 -930px; }
+
+.lang-ro .flag {
+  background-position: 0 -168px; }
+
+.lang-ru .flag {
+  background-position: 0 -422px; }
+
+.lang-se .flag {
+  background-position: 0 -42px; }
+
+.lang-se .flag {
+  background-position: 0 -591px; }
+
+.lang-sg .flag {
+  background-position: 0 -845px; }
+
+.lang-th .flag {
+  background-position: 0 -803px; }
+
+.lang-tr .flag {
+  background-position: 0 -210px; }
+
+.lang-tw .flag {
+  height: 42px;
+  background-position: 0 -1227px; }
+
+.lang-uk .flag {
+  background-position: 0 -634px; }
+
+.lang-us .flag {
+  background-position: 0 -718px; }
+
+.lang-vi .flag {
+  background-position: 0 -761px; }
+
 .list-of-countries {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +375,6 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .list-of-countries > div {
-    margin-bottom: 20px;
     width: 20%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -282,11 +391,23 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
     width: auto;
     padding: 20px;
     font-size: 0.875em;
-    text-align: left;
+    text-align: center;
     cursor: pointer; }
-    .list-of-countries label > div {
+    .list-of-countries label .label-wrp {
       position: relative;
+      margin: 0 auto;
+      min-width: 80px;
       font-size: 1.125em; }
+      .list-of-countries label .label-wrp .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
   .list-of-countries input {
     display: none; }
     .list-of-countries input:checked + label {
@@ -376,18 +497,20 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
     font-weight: 900;
     text-align: center; }
 
-.steps {
-  background: #2b3151; }
-  .steps ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+.steps ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .website-information label {
   width: 215px; }
+
+.navigation-steps {
+  padding-left: 7%;
+  padding-right: 7%; }
 
 header {
   padding: 20px 0;
@@ -406,9 +529,9 @@ header {
             justify-content: space-between; }
 
 .section-sign-up {
-  background: #2b3151;
-  border-top: 1px solid #2b3151;
-  border-bottom: 1px solid #2b3151; }
+  border-top: 1px solid #2b3151; }
+  .section-sign-up form {
+    padding: 0 0; }
 
 .steps {
   padding-top: 50px; }
@@ -448,16 +571,29 @@ header {
       color: #89cde7; }
 
 #svgs {
-  position: relative;
-  -webkit-transform: translateY(-95%);
-          transform: translateY(-95%); }
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  max-height: 400px;
+  background-color: #2b3151; }
   #svgs:before {
     position: absolute;
-    bottom: -4px;
+    bottom: -100px;
     content: '';
-    height: 10px;
+    height: 105px;
     width: 100%;
     background: #51d1c2; }
+  #svgs polygon {
+    -webkit-transform: translateZ(15px);
+            transform: translateZ(15px);
+    -webkit-filter: drop-shadow(3px 2px 2px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7)); }
+  #svgs polygon:first-child {
+    -webkit-transform: translateZ(25px);
+            transform: translateZ(25px); }
+  #svgs polygon:last-child {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px); }
 
 .wrp {
   margin: 0 auto;

@@ -24,7 +24,6 @@ export default function(){
   const jsPaths = {
     //src: `${dirs.src}/**/*.js`,
     src: `${dirs.src}/js/affiliate-partners-sign-up/**/*.js`,
-
   }
 
   gulp.task('scripts', () => {
@@ -32,13 +31,13 @@ export default function(){
     return gulp.src(jsPaths.src)
       .pipe(concat('main.js'))
       //.pipe(browserify())
-      .pipe(babel({presets: ['es2015']}))
-      .pipe($.uglify())
-      .pipe(babili({
-        mangle: {
-          keepClassName: true
-        }
-      }))
+    //   .pipe(babel({presets: ['es2015']}))
+    //   .pipe($.uglify())
+    //   .pipe(babili({
+    //     mangle: {
+    //       keepClassName: true
+    //     }
+    //   }))
 
       .pipe(plumber(error => gutil.log(error.message)))
       .pipe(gulp.dest(`${dirs.dest}`))

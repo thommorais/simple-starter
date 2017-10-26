@@ -1,5 +1,7 @@
 .section-sign-up{
-    background: $c5;
     border-top: 1px solid $c5;
-    border-bottom: 1px solid $c5;
+
+    form{
+        padding: 0 0;
+    }
 }
