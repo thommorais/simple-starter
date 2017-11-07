@@ -109,10 +109,10 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2B3151), color-stop(55%, #2B3151), color-stop(55%, #51D1C2), to(#51D1C2));
   background-image: linear-gradient(-180deg, #2B3151 0%, #2B3151 55%, #51D1C2 55%, #51D1C2 100%); }
 
-.personal-information, .tag-geos, .website-information, .sign-up {
+.personal-information, .tag-geos, .website-information, .sign-up, .sucess {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
-  .personal-information:after, .tag-geos:after, .website-information:after, .sign-up:after {
+  .personal-information:after, .tag-geos:after, .website-information:after, .sign-up:after, .sucess:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -123,7 +123,7 @@ body {
     -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
 
-.personal-information, .tag-geos, .website-information, .sign-up {
+.personal-information, .tag-geos, .website-information, .sign-up, .sucess {
   position: relative;
   z-index: 10;
   padding: 20px 10px;
@@ -242,7 +242,6 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
     -webkit-transition: outline-width 0.2s linear;
     transition: outline-width 0.2s linear;
     font-family: 'Lato', sans-serif;
-    font-style: italic;
     color: #2b3151;
     font-weight: 700;
     font-size: 1em;
@@ -406,7 +405,7 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
     margin-right: 5px; }
   .list-of-countries label {
     margin: 0 auto;
-    width: auto;
+    width: 130px;
     padding: 20px;
     font-size: 0.875em;
     text-align: center;
@@ -522,6 +521,21 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.sucess {
+  max-width: 720px; }
+  .sucess h1 {
+    color: #89cde7;
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center; }
+  .sucess p {
+    margin: 20px auto;
+    max-width: 620px;
+    text-align: center;
+    color: #2b3151;
+    font-size: 1.125em;
+    font-weight: 600; }
 
 .website-information label {
   width: 215px; }
