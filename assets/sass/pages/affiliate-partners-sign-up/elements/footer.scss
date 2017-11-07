@@ -1,0 +1,30 @@
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    @extend %flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #282d49;
+
+    > ul li{
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    a{
+      padding: 5px;
+      color: $c6;
+    }
+
+    .registering{
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: em(14px);
+      color: $c9;
+    }
+
+}
+//http://cdn-www.bluestacks.com/bs-images/logo-footer.png

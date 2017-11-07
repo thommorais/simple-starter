@@ -89,28 +89,17 @@ figure {
 /*********************************************************************
 *  =Flex
 *********************************************************************/
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 /*********************************************************************
 *  =Verticaly centered
 *********************************************************************/
-svg:not(.no-touch) path {
-  stroke-linejoin: round;
-  fill: inherit; }
-
-svg:not(.no-touch) line {
-  fill: none;
-  stroke-linejoin: round;
-  stroke-width: 1;
-  stroke: inherit; }
-
-svg:not(.no-touch) polyline {
-  stroke-dasharray: 0;
-  stroke-dashoffset: 0; }
-
-.box-gift {
-  fill: #A2E6FF;
-  height: 54px;
-  width: 54px; }
-
 body, html {
   font-family: 'Lato', sans-serif;
   background: #2b3151;
@@ -368,6 +357,35 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
 .lang-vi .flag {
   background-position: 0 -761px; }
 
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  background: #282d49; }
+  .footer > ul li {
+    margin: 0 10px;
+    display: inline-block; }
+  .footer a {
+    padding: 5px;
+    color: #51d1c2; }
+  .footer .registering {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.875em;
+    color: #cfdbe7; }
+
 .list-of-countries {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,6 +550,9 @@ header {
   border-top: 1px solid #2b3151; }
   .section-sign-up form {
     padding: 0 0; }
+
+main {
+  min-height: calc(100vh - 295px); }
 
 .steps {
   padding-top: 50px; }
