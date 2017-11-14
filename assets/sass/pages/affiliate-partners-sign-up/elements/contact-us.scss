@@ -1,0 +1,110 @@
+$transition: cubic-bezier(.67,.11,.12,.94);
+
+.contact-us {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#000, 0.3);
+    opacity: 0;
+    pointer-events: none;
+
+    .box {
+        @extend %boxes;
+        max-width: 540px;
+        pointer-events: none;
+        opacity: 0;
+
+        p{
+            padding: 0 30px;
+            line-height: 1.4em;
+            font-weight: 500;
+            color: $c5;
+        }
+
+        a{
+            color: $c6;
+            font-weight: 400;
+        }
+
+        &.modal {
+            position: fixed;
+            z-index: 99;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -40%);
+            transition: transform 0.2s $transition, opacity 0.2s $transition;
+        }
+
+        &.active {
+            pointer-events: all;
+            opacity: 1;
+        }
+
+    }
+
+    &.open {
+        pointer-events: all;
+        opacity: 1;
+
+        .box.modal {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    h4 {
+        font-size: em(19px);
+        margin: 10px 0 30px;
+        text-align: center;
+    }
+
+    form {
+        padding: 0 40px;
+
+        label {
+            font-size: em(16px);
+        }
+    }
+}
+
+button.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    i:after,
+    i:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        display: block;
+        height: 25px;
+        width: 4px;
+        background: $c1;
+        border-radius: 3px;
+        transition: transform 0.2s cubic-bezier(.17,.67,.83,.47);
+    }
+
+    i:before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    i:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:hover {
+        i:after,
+        i:before {
+            background: darken($c1, 4);
+        }
+    }
+}

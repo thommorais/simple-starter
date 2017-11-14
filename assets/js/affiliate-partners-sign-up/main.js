@@ -1,5 +1,3 @@
-
-
 function pointToNumbers(points, x){
     return points.split(' ')
         .map((point, index) => {
@@ -43,9 +41,9 @@ DOMReady( () => {
         anime({
           targets: poly,
           points: [
-                { value: pointToNumbers(points, getRandomArbitrary(180, 385))},
-                { value: pointToNumbers(points, getRandomArbitrary(100, 285))},
-                { value: pointToNumbers(points, getRandomArbitrary(80, 150))},
+                { value: pointToNumbers(points, 385)},
+                { value: pointToNumbers(points, getRandomArbitrary(100, 0))},
+                { value: pointToNumbers(points, getRandomArbitrary(100, 150))},
                 { value: pointToNumbers(points, 0)},
 
           ],

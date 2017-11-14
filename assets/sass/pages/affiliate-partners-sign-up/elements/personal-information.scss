@@ -29,6 +29,7 @@
     }
 
 }
+
 .personal-information{
     @extend %personal-information;
 
@@ -55,4 +56,23 @@
     .space-around{
         margin-top: 10px;
     }
+}
+
+.terms-and-conditions-wrp{
+    justify-content: flex-end;
+
+    label{
+        width: auto;
+    }
+
+    a{
+        color: $c1;
+        text-decoration: underline;
+    }
+}
+
+.field label sup {
+    position: absolute;
+    right: 0px;
+    top: 0;
 }

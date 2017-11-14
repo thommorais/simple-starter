@@ -55,6 +55,7 @@ const scroll = window.requestAnimationFrame ||
  } catch (e) {}
 
 
+
  // check if a numer is odd or not
 const isOdd = num => num % 2
 

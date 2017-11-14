@@ -120,10 +120,10 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2B3151), color-stop(55%, #2B3151), color-stop(55%, #51D1C2), to(#51D1C2));
   background-image: linear-gradient(-180deg, #2B3151 0%, #2B3151 55%, #51D1C2 55%, #51D1C2 100%); }
 
-.personal-information, .tag-geos, .website-information, .sign-up {
+.contact-us .box, .personal-information, .tag-geos, .website-information, .sign-up, .sucess {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
-  .personal-information:after, .tag-geos:after, .website-information:after, .sign-up:after {
+  .contact-us .box:after, .personal-information:after, .tag-geos:after, .website-information:after, .sign-up:after, .sucess:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +134,7 @@ body {
     -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
 
-.personal-information, .tag-geos, .website-information, .sign-up {
+.contact-us .box, .personal-information, .tag-geos, .website-information, .sign-up, .sucess {
   position: relative;
   z-index: 10;
   padding: 20px 10px;
@@ -176,6 +176,91 @@ button {
   font-size: 1.125em;
   font-weight: 900;
   color: #89cde7; }
+
+.contact-us {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none; }
+  .contact-us .box {
+    max-width: 540px;
+    pointer-events: none;
+    opacity: 0; }
+    .contact-us .box p {
+      padding: 0 30px;
+      line-height: 1.4em;
+      font-weight: 500;
+      color: #2b3151; }
+    .contact-us .box a {
+      color: #51d1c2;
+      font-weight: 400; }
+    .contact-us .box.modal {
+      position: fixed;
+      z-index: 99;
+      left: 50%;
+      top: 30%;
+      -webkit-transform: translate(-50%, -40%);
+              transform: translate(-50%, -40%);
+      -webkit-transition: opacity 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94), -webkit-transform 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94);
+      transition: opacity 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94), -webkit-transform 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94);
+      transition: transform 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94), opacity 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94);
+      transition: transform 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94), opacity 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94), -webkit-transform 0.2s cubic-bezier(0.67, 0.11, 0.12, 0.94); }
+    .contact-us .box.active {
+      pointer-events: all;
+      opacity: 1; }
+  .contact-us.open {
+    pointer-events: all;
+    opacity: 1; }
+    .contact-us.open .box.modal {
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .contact-us h4 {
+    font-size: 1.1875em;
+    margin: 10px 0 30px;
+    text-align: center; }
+  .contact-us form {
+    padding: 0 40px; }
+    .contact-us form label {
+      font-size: 1em; }
+
+button.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer; }
+  button.close i:after,
+  button.close i:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    display: block;
+    height: 25px;
+    width: 4px;
+    background: #89cde7;
+    border-radius: 3px;
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.47);
+    transition: -webkit-transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.47);
+    transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.47);
+    transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.47), -webkit-transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.47); }
+  button.close i:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg); }
+  button.close i:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg); }
+  button.close:hover i:after,
+  button.close:hover i:before {
+    background: #78c6e4; }
 
 .fake-checkbox {
   position: relative;
@@ -487,6 +572,21 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
 .personal-information .space-around {
   margin-top: 10px; }
 
+.terms-and-conditions-wrp {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .terms-and-conditions-wrp label {
+    width: auto; }
+  .terms-and-conditions-wrp a {
+    color: #89cde7;
+    text-decoration: underline; }
+
+.field label sup {
+  position: absolute;
+  right: 0px;
+  top: 0; }
+
 .sign-up {
   display: block;
   height: 305px;
@@ -504,6 +604,21 @@ input:checked + label .fake-checkbox:after, input:checked + label .fake-checkbox
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.sucess {
+  max-width: 720px; }
+  .sucess h1 {
+    color: #89cde7;
+    font-size: 1.875em;
+    font-weight: 900;
+    text-align: center; }
+  .sucess p {
+    margin: 20px auto;
+    max-width: 620px;
+    text-align: center;
+    color: #2b3151;
+    font-size: 1.125em;
+    font-weight: 600; }
 
 .website-information label {
   width: 215px; }

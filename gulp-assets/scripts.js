@@ -29,7 +29,7 @@ export default function(){
   gulp.task('scripts', () => {
 
     return gulp.src(jsPaths.src)
-      .pipe(concat('main.js'))
+      .pipe(concat('affiliate-partners-sign-up.js'))
       //.pipe(browserify())
     //   .pipe(babel({presets: ['es2015']}))
     //   .pipe($.uglify())

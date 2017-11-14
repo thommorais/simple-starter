@@ -1,0 +1,21 @@
+.sucess{
+    @extend %boxes;
+    max-width: 720px;
+    
+    h1{
+        color: $c8;
+        font-size: em(30px);
+        font-weight: 900;
+        text-align: center;
+    }
+
+    p{
+        margin: 20px auto;
+        max-width: 620px;
+        text-align: center;
+        color: $c5;
+        font-size: em(18px);
+        font-weight: 600;
+    }
+
+}
