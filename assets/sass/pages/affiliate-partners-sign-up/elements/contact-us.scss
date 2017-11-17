@@ -38,11 +38,16 @@ $transition: cubic-bezier(.67,.11,.12,.94);
             transition: transform 0.2s $transition, opacity 0.2s $transition;
         }
 
-        &.active {
-            pointer-events: all;
-            opacity: 1;
-        }
+    }
 
+    .hide{
+        opacity: 0;
+        display: none;
+    }
+
+    .show{
+        opacity: 1;
+        display: block;
     }
 
     &.open {
@@ -52,6 +57,12 @@ $transition: cubic-bezier(.67,.11,.12,.94);
         .box.modal {
             transform: translate(-50%, -50%);
         }
+
+        .box {
+            pointer-events: all;
+            opacity: 1;
+        }
+
     }
 
     h4 {
@@ -60,8 +71,63 @@ $transition: cubic-bezier(.67,.11,.12,.94);
         text-align: center;
     }
 
+    .field{
+        position: relative;
+        padding: 0 30px 10px 0;
+
+        textarea{
+            min-height: 110px;
+        }
+
+    }
+
+    .top{
+        align-items: flex-start;
+    }
+
+    .sending input,
+    .sending textarea,
+    .sending label{
+        pointer-events: none;
+        user-select: none;
+        opacity: 0.2;
+        &::selection { background: transparent; }
+    }
+
+    .sending button{
+        pointer-events: none;
+    }
+
+    .ng-invalid,
+    .error{
+        box-shadow: 0 0 1px #FF384B;
+        border-radius: 1px;
+        outline: none;
+        background-image: url(../assets/img/errorSvg.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) 8px;
+
+        &:focus{
+            background-image: none;
+            box-shadow: none;
+        }
+    }
+
+
+
+    .error-message{
+        position: absolute;
+        bottom: -8px;
+        right: 30px;
+        font-size: em(12px);
+        text-align:right;
+        font-style: italic;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        color: #FF384B;
+    }
+
     form {
-        padding: 0 40px;
 
         label {
             font-size: em(16px);

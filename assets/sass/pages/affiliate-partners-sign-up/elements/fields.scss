@@ -22,8 +22,10 @@
     }
 
     label{
+        position: relative;
+        padding-right: 5px;
         display: block;
-        width: 120px;
+        width: 125px;
         color: #808080;
         font-size: em(18px);
         text-align: right;
@@ -43,7 +45,6 @@
         outline-color: darken($c1, 10);
         transition: outline-width 0.2s linear;
         font-family: 'Lato', sans-serif;
-        font-style: italic;
         color: $c5;
         font-weight: 700;
         font-size: em(16px);

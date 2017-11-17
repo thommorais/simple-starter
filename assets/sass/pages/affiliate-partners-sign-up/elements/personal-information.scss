@@ -58,11 +58,18 @@
     }
 }
 
-.terms-and-conditions-wrp{
+.website-information .terms-and-conditions-w{
     justify-content: flex-end;
+    margin-bottom: 45px;
 
     label{
+        font-size: em(14px);
         width: auto;
+    }
+
+    input{
+        position: relative;
+        top: 1px;
     }
 
     a{

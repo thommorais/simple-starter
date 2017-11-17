@@ -37,7 +37,7 @@ export default function(){
       .pipe(plumber(error => gutil.log(error.message)))
       .pipe(sass.sync())
       .pipe(autoprefixer())
-      //.pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(sassPaths.dest))
 

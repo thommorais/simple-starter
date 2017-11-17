@@ -29,7 +29,7 @@
                                 <a href="">FAQ</a>
                             </li>
                             <li>
-                                <a href="">Contact Us</a>
+                                <a href="" data-modal="contact-us-modal">Contact Us</a>
                             </li>
                         </ul>
 
@@ -48,25 +48,28 @@
 
             <section class="section-sign-up">
 
-                <div class="contact-us open">
+                <div class="contact-us" id="contact-us-modal">
                     <div class="box">
+                        <button type="button" class="close" data-modal="contact-us-modal">
+                            <i></i>
+                        </button>
 
                         <h4>Contact Us</h4>
-                        <form>
+                        <form id="contact-us-form">
 
                             <div class="field">
-                                <label>Name:</label>
-                                <input type="text" />
+                                <label>Name: <sup>*</sup></label>
+                                <input id="contact-name" type="text" />
                             </div>
 
                             <div class="field">
-                                <label>Email:</label>
-                                <input type="text" />
+                                <label>Email:<sup>*</sup></label>
+                                <input id="contact-email" type="text" />
                             </div>
 
-                            <div class="field">
-                                <label>Your message:</label>
-                                <input type="text" />
+                            <div class="field top">
+                                <label>Your message:<sup>*</sup></label>
+                                <textarea id="contact-message" ></textarea>
                             </div>
 
                             <div class="field end">
@@ -77,8 +80,23 @@
 
                         </form>
 
+                        <div class="message-ok hide">
+                            <p>Thank you for contacting the BlueStacks affiliate team.  We will reply to your e-mail as soon as possible!</p>
+
+                            <p>Best regards,</p>
+
+                            <p>
+                                The BlueStacks Affiliate Team
+                                <br />
+                                <a href="https://www.BlueStacks.com">
+                                    https://www.BlueStacks.com
+                                </a>
+                            </p>
+
+                        </div>
 
                     </div>
+
                 </div>
 
             </section>
